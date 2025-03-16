@@ -937,9 +937,7 @@ namespace {
                     builder.comment(
                         std::format("{} has a template type with potentially unknown template parameters. You can try uncommenting the field below.",
                                     var_info.m_name));
-                    builder.comment("", false);
-                    builder.reset_tabs_count().prop(var_info.m_type, var_info.formatted_name(), true).restore_tabs_count();
-                    builder.prop("char", std::format("{}[{:#x}]", var_info.m_name, field_size), false);
+					builder.prop(var_info.m_type, var_info.formatted_name(), false);
                 } else {
                     builder.prop(var_info.m_type, var_info.formatted_name(), false);
                 }
